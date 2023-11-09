@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Current user's playlist tracks</title> 
+</head>
+<body>
+    <h1>Hello {name}, here are your playlist tracks:</h1>
+    <table>
+    {#for track in tracks}
+      <tr>
+        <td>
+            <img src="{track.imageUrl}"/>
+        </td>
+        <td>
+            <a href="{track.previewUrl}"><b>{track.name}</b>: Audio Preview</a>
+        </td>
+        <td>
+            <a href="{track.spotifyUrl}">Listen to it at Spotify</a>
+        </td>
+      </tr>
+    {/for}
+    </table>
+</body>
+</html>

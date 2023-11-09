@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Current user's playlists</title> 
+</head>
+<body>
+    <h1>Hello {name}, here are your playlists:</h1>
+    <table>
+    {#for playlist in playlists}
+      <tr>
+        <td>
+            <img src="{playlist.imageUrl}"/>
+        </td>
+        <td>
+            <a href="/spotify/playlist/{playlist.id}/tracks"><b>{playlist.name}</b>: Tracks</a>
+        </td>
+        <td>
+            <a href="{playlist.spotifyUrl}">Play it at Spotify</a>
+        </td>
+      </tr>
+    {/for}
+    </table>
+</body>
+</html>

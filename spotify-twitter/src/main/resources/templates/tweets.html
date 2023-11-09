@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Current user's tweets</title> 
+</head>
+<body>
+    <h1>{name} (@{handle}), your recent tweets and retweets (RT):</h1>
+    <table>
+    {#for tweet in tweets}
+      <tr>
+        <td>
+            {tweet.text}
+        </td>
+        <td>
+            <a href="/twitter/conversation/{tweet.conversationId}">Conversation</a>
+        </td>
+        <td>
+            <a href="/twitter/conversation/{tweet.conversationId}?tweetId={tweet.id}">Replies</a>
+        </td>
+        <td>
+            <a href="/twitter/create/{tweet.id}">Reply</a>
+        </td>
+      </tr>
+    {/for}
+    </table>
+    <a href="/twitter/poll">Start Quarkus Playlist poll</a>
+</body>
+</html>
