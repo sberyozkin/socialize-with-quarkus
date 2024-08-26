@@ -27,6 +27,8 @@ public class ProvidersConfigSource implements ConfigSource {
 				   "spotify-client-secret", "your-spotify-client-secret",
 				   "twitter-client-id", "your-twitter-client-id",
 				   "twitter-client-secret", "your-spotify-client-secret",
+				   "discord-client-id", "your-discord-client-id",
+				   "discord-client-secret", "your-discord-client-secret",
 				   "basic-auth-secret", "basic-auth-secret");
 	
 }
